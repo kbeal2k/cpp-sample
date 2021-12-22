@@ -2,7 +2,17 @@
 # Build and run tests for .NET Desktop or Windows classic desktop solutions.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
-
+resources:
+  repositories:
+  - repository: MyBitbucketRepo
+    type: bitbucket
+    endpoint: cube2
+    name: citilabs/cube-voyager-binaries
+  - repository: MyBitbucketRepo2
+    type: bitbucket
+    endpoint: cube2
+    name: citilabs/cube7-experimental
+    
 trigger:
 - master
 
